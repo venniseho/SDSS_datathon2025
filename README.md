@@ -4,8 +4,6 @@ Contributors:
 - Vennise Ho
 - Lillian Toe
 - Duncan Wan
-<<<<<<< HEAD
-<<<<<<< HEAD
 - Oceane Yembiline
 
 ## Table of Contents
@@ -15,9 +13,3 @@ Contributors:
 - Installation Instructions
 - Usage Guide
 - License
-=======
-- Oceane Yembiline
->>>>>>> b206ca7d5cc8ca1e8d8b058cfbb24917f2e64652
-=======
-- Oceane Yembiline
->>>>>>> b206ca7d5cc8ca1e8d8b058cfbb24917f2e64652
