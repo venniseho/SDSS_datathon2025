@@ -56,10 +56,9 @@ def clean_property_orientation(value: str) -> int:
 
 # Data Cleaning
 df = df.replace("NA", pd.NA).dropna()
-df['ward_num'] = pd.to_numeric(df['ward_num'], errors='coerce').astype('Int64')
+df['ward_num'] = df['ward_num'].str.extract('(\\d+)').astype(int)
 df["size_group"] = df["size_group"].apply(convert_size_to_group)
 df["property_orientation"] = df["property_orientation"].apply(clean_property_orientation)
-df.dropna(inplace=True)
 
 # Convert boolean features to integer (0/1)
 df["has_den"] = df["has_den"].str.strip().str.lower().map({"yes": 1, "no": 0})
