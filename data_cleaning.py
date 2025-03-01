@@ -1,11 +1,9 @@
 """
-Data Cleaning
+Real Estate Data Cleaning & Preprocessing
 
-New column headers: "id", "ward_num", "num_beds", "num_baths", "has_den", "size_group", "has_parking",
-                    "property_orientation", "days_on_market", "building_age", "monthly_maintenance_fee",
-                    "listing_price", "latitude", "longitude"
+The initial script cleans & processes real estate data.
 
-This code was generated with assistance from ChatGPT, an AI language model by OpenAI.
+Generated with assistance from ChatGPT, an AI language model by OpenAI.
 Date: 2025-03-01
 """
 
