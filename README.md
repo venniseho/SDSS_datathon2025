@@ -8,7 +8,7 @@
 5. [Datasets](#-datasets)
 6. [Model Performance Evaluation](#-model-performance-evaluation)
 7. [Model Tuning & Improvements](#-model-tuning--improvements)
-8. [Best Model & Next Steps](#-best-model--next-steps)
+8. [Next Steps](#-next-steps)
 9. [Open Source & Licensing](#-open-source--licensing)
 10. [Contributors](#-contributors)
 11. [AI Assistance](#-ai-assistance)
@@ -110,26 +110,50 @@ This project includes two datasets:
 | **XGBoost**           | 0.9113  | 111,094  |
 | **Random Forest**      | 0.9040  | 119,793  |
 
+✅ The **best model** based on performance is **Gradient Boosting**.  
+
 ## 🔧 Model Tuning & Improvements
 - **Feature Engineering:** Add `price per sqft`, `location`, or `year_built` for better accuracy.
 - **Hyperparameter Tuning:** Use `GridSearchCV` or `RandomizedSearchCV` to optimize model parameters.
 - **Geospatial Data Integration:** Include distance to TTC subway stations for location-based price adjustments.
 - **Deployment:** The pre-trained model is stored and used directly for predictions.
 
-## 🏆 Best Model & Next Steps
-✅ The **best model** based on performance is **Gradient Boosting**.  
-📌 Future work includes **improving model generalization** and enhancing the **web app UI**.
+## 🏆 Next Steps
+To further enhance the model and improve usability, we plan to:
+
+- **Enhance Model Generalization** – Optimize hyperparameters and expand training data to improve model accuracy across diverse property listings.
+- **Improve the Web App UI** – Implement a more user-friendly interface with interactive elements and enhanced visualization features.
+- **Expand Location Coverage** – Incorporate additional real estate data beyond Toronto’s downtown core to improve model applicability.
+- **Integrate Complete Location Data** – Utilize more comprehensive geospatial datasets to refine property location-based predictions.
+- **Enable Real-Time Data Updates** – Implement dynamic data updates to provide more accurate, real-time price predictions, helping stakeholders make informed decisions.
 
 ## 📜 Open Source & Licensing
-This project uses the following open-source models and libraries:
-- **Scikit-learn** (BSD-3 License) – Linear Regression, Random Forest, Gradient Boosting, MLPRegressor.
-- **XGBoost** (Apache 2.0 License) – XGBoostRegressor.
-- **LightGBM** (MIT License) – LightGBMRegressor.
+This project uses the following open-source libraries:
 
-For full licensing details, refer to the respective repositories:
-- [Scikit-learn License](https://github.com/scikit-learn/scikit-learn/blob/main/COPYING)
-- [XGBoost License](https://github.com/dmlc/xgboost/blob/master/LICENSE)
-- [LightGBM License](https://github.com/microsoft/LightGBM/blob/master/LICENSE.txt)
+### **Machine Learning Libraries**
+- **[Scikit-learn](https://github.com/scikit-learn/scikit-learn)** (BSD-3 License) – Used for regression models and preprocessing.
+- **[XGBoost](https://github.com/dmlc/xgboost)** (Apache 2.0 License) – Used for gradient boosting regression.
+- **[LightGBM](https://github.com/microsoft/LightGBM)** (MIT License) – Used for efficient boosting regression.
+
+### **Data Handling & Computation**
+- **[Pandas](https://github.com/pandas-dev/pandas)** (BSD-3 License) – Used for data manipulation and analysis.
+- **[NumPy](https://github.com/numpy/numpy)** (BSD License) – Used for numerical computing.
+- **[SciPy](https://github.com/scipy/scipy)** (BSD License) – Used for scientific computations.
+- **[Joblib](https://github.com/joblib/joblib)** (BSD License) – Used for model persistence.
+
+### **Data Visualization**
+- **[Matplotlib](https://github.com/matplotlib/matplotlib)** (PSF License) – Used for data visualization.
+- **[Seaborn](https://github.com/mwaskom/seaborn)** (BSD License) – Used for statistical data visualization.
+
+### **Geospatial Data & Mapping**
+- **[GeoPandas](https://github.com/geopandas/geopandas)** (BSD License) – Used for geospatial data handling.
+- **[Folium](https://github.com/python-visualization/folium)** (MIT License) – Used for interactive map visualizations.
+- **[Shapely](https://github.com/shapely/shapely)** (BSD License) – Used for spatial operations.
+
+### **Web Application**
+- **[Streamlit](https://github.com/streamlit/streamlit)** (Apache 2.0 License) – Used for building the interactive web application.
+
+For full licensing details, please refer to the respective repositories.
 
 ## 👥 Contributors
 This project was created by:
