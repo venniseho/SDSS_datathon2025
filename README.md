@@ -19,7 +19,7 @@ This project builds a **real estate price prediction web application** using a p
 - Number of bedrooms
 - Number of bathrooms
 - Maintenance fees
-- Property size category
+- Property size 
 
 ## 📦 Installation
 Before running the project, install the required dependencies:
