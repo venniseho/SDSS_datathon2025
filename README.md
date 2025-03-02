@@ -57,7 +57,7 @@ The real estate price prediction tool is available as a **web application** usin
 To launch the app, run:
 
 ```bash
-streamlit run src/real_estate_dashboard.py
+streamlit run src/toronto_property_price_prediction_web_app.py
 ```
 
 This will open a web browser where you can:
