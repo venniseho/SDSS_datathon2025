@@ -10,9 +10,10 @@
 7. [Model Tuning & Improvements](#-model-tuning--improvements)
 8. [Next Steps](#-next-steps)
 9. [Open Source & Licensing](#-open-source--licensing)
-10. [Contributors](#-contributors)
-11. [AI Assistance](#-ai-assistance)
-12. [License](#-license)
+10. [Troubleshooting](#-troubleshooting)
+11. [Contributors](#-contributors)
+12. [AI Assistance](#-ai-assistance)
+13. [License](#-license)
 
 ## 📖 Overview
 This project builds a **real estate price prediction web application** using a pre-trained machine learning model. The goal is to provide an interactive tool for users to estimate property listing prices based on the following features:
@@ -111,6 +112,9 @@ This project includes two datasets:
 
 ✅ The **best model** based on performance is **Gradient Boosting**.  
 
+This information is found in: ```src/visualization/visualization_images/model_evaluation_scores.txt``` and as a graph in ```src/visualization/visualization_images/model_evaluation.png```
+The model evaluation script produces the text file and graph which is run by: 
+
 ## 🔧 Model Tuning & Improvements
 - **Feature Engineering:** Add `price per sqft`, `location`, or `year_built` for better accuracy.
 - **Hyperparameter Tuning:** Use `GridSearchCV` or `RandomizedSearchCV` to optimize model parameters.
@@ -153,6 +157,31 @@ This project uses the following open-source libraries:
 - **[Streamlit](https://github.com/streamlit/streamlit)** (Apache 2.0 License) – Used for building the interactive web application.
 
 For full licensing details, please refer to the respective repositories.
+
+## 📜 Troubleshooting
+If you encounter a `ModuleNotFoundError` when running a script from the command line, ensure the `src` directory is recognized as a package.
+
+### ✅ **Fix: Set the Python Path**
+#### **Windows (cmd)**
+```bash
+set PYTHONPATH=%CD%
+python src/visualization/evaluate_models.py
+```
+#### **PowerShell**
+```powershell
+$env:PYTHONPATH = $PWD
+python src/visualization/evaluate_models.py
+```
+#### **Mac/Linux**
+```bash
+export PYTHONPATH=$(pwd)
+python src/visualization/evaluate_models.py
+```
+Alternatively, navigate to the `src` directory and run:
+```bash
+cd src
+python -m visualization.evaluate_models
+```
 
 ## 👥 Contributors
 This project was created by:
