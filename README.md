@@ -84,7 +84,7 @@ This project consists of three main components:
 ## 📂 Datasets
 This project includes two datasets:
 1. **Base Real Estate Data:** `cleaned_real_estate_data_numerical.csv`
-   - This dataset was provided by the **SDSS Datathon 2025** and contains general real estate features such as bedrooms, bathrooms, maintenance fees, and property size category.
+   - Contains general real estate features such as price, number of bedrooms, size, ward, and days on market
 2. **Enhanced Real Estate Data:** `real_estate_data_with_subway_distance.csv`
    - Includes all base dataset features plus `subway_distance`, which represents the distance to the nearest TTC subway station (in meters).
 
