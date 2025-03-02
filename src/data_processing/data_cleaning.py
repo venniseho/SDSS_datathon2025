@@ -10,7 +10,7 @@ Date: 2025-03-01
 import pandas as pd
 
 # Load the dataset
-file_path = "real-estate-data.csv"  # Change path if needed
+file_path = "../../data/real-estate-data.csv"  # Change path if needed
 df = pd.read_csv(file_path)
 
 # Rename column headers for ease of use
