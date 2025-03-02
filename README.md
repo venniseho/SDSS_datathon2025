@@ -63,7 +63,7 @@ streamlit run src/toronto_property_price_prediction_web_app.py
 To close the web app CTRL + C while the tab is still open.
 
 This will open a web browser where you can:
-- Input property details (e.g., bedrooms, bathrooms, size group, subway proximity).
+- Input property details (e.g., bedrooms, bathrooms, size group).
 - Get **price predictions** using the **pre-trained model**.
 - View model evaluation results.
 
@@ -88,7 +88,7 @@ This project includes two datasets:
 1. **Base Real Estate Data:** `cleaned_real_estate_data_numerical.csv`
    - Contains general real estate features such as price, number of bedrooms, size, ward, and days on market
 2. **Enhanced Real Estate Data:** `real_estate_data_with_subway_distance.csv`
-   - Includes all base dataset features plus `subway_distance`, which represents the distance to the nearest TTC subway station (in meters).
+   - Includes all base dataset features plus `subway_distance`, which represents the distance to the nearest TTC subway station.
 
 **Data Sources:**
 - **Real Estate Data:** Provided by the [SDSS Datathon 2025](https://sdss.datathon2025.org)
