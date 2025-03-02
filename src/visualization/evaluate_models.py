@@ -10,11 +10,12 @@ Generated with assistance from ChatGPT (OpenAI)
 """
 import os
 
+import pandas as pd
 from matplotlib import pyplot as plt
 from src.models.multiple_models import train_and_evaluate_models
 
 
-def plot_model_comparison(results_df):
+def plot_model_comparison(results_df: pd.DataFrame) -> None:
     """
     Generates a visualization comparing model performance metrics.
 
@@ -41,7 +42,16 @@ def plot_model_comparison(results_df):
     plt.xticks(rotation=45)
 
     plt.tight_layout()
-    plt.savefig('model_evaluation', dpi=300)
+    plt.savefig(os.path.join(base_dir, 'visualization_images', 'model_evaluation'), dpi=300)
+
+
+def save_scores_in_file(results_df: pd.DataFrame, output_dir: str) -> None:
+    scores_file = os.path.join(output_dir, "model_evaluation_scores.txt")
+    with open(scores_file, "w") as f:
+        f.write("Model Performance Evaluation Scores\n")
+        f.write("==================================\n")
+        f.write(results_df.to_string())
+    print(f"Model evaluation scores saved at: {scores_file}")
 
 
 # Get the absolute path of the current script (app.py) and define the correct model path
@@ -51,3 +61,4 @@ file_path = os.path.join(project_root, "data", "cleaned_real_estate_data_numeric
 
 results = train_and_evaluate_models(file_path)
 plot_model_comparison(results)
+save_scores_in_file(results, os.path.join(base_dir, 'visualization_images'))

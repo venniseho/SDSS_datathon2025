@@ -1,0 +1,9 @@
+Model Performance Evaluation Scores
+==================================
+                   R² Score            MAE
+Gradient Boosting  0.922885  106186.100014
+Neural Network     0.920915  112586.450005
+Linear Regression  0.916872  113061.569515
+LightGBM           0.913663  109008.038423
+XGBoost            0.911304  111093.995511
+Random Forest      0.904029  119793.323927

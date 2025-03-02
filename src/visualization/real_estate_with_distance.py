@@ -19,7 +19,7 @@ from shapely.geometry import Point, LineString
 # Get the absolute path of the current script (app.py) and define the correct model path
 base_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
-real_estate_file_path = os.path.join(project_root, "data", "real_estate_with_subway_distance.csv")
+real_estate_file_path = os.path.join(project_root, "data", "real_estate_data_with_subway_distance.csv")
 
 # Load real estate data
 real_estate_df = pd.read_csv(real_estate_file_path)
@@ -81,11 +81,12 @@ for _, row in real_estate_gdf.iterrows():
         fill=True,
         fill_color=color,
         fill_opacity=0.6,
-        popup=f"Listing_Price: ${price:,.0f}\nSize: {row['size_group']} sqft\nBeds: {row['num_beds']}\nBaths: {row['num_baths']}\nDistance to TTC: {row['distance_to_subway']}m",
+        popup=f"Listing_Price: ${price:,.0f}\nSize: {row['size_group']} sqft\nBeds: {row['num_beds']}\n"
+              f"Baths: {row['num_baths']}\nDistance to TTC: {row['distance_to_subway']}m",
     ).add_to(toronto_map)
 
 # Save map as HTML file
-toronto_map.save('Real_Estate_Subway_Map.html')
+toronto_map.save(os.path.join(base_dir, 'visualization_images', 'real_estate_subway_map.html'))
 
 # Display message
-print("Map created successfully! You can open 'Real_Estate_Subway_Map.html' to view it.")
+print("Map created successfully! You can open 'real_estate_subway_map.html' to view it.")
