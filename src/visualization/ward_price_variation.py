@@ -10,13 +10,17 @@ Author: Duncan Wan
 Date: 2025-03-01
 Generated with assistance from ChatGPT (OpenAI)
 """
-
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# Get the absolute path of the current script (app.py) and define the correct model path
+base_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
+file_path = os.path.join(project_root, "data", "cleaned_real_estate_data_numerical.csv")
+
 # Load dataset
-file_path = "/Users/duncan/PycharmProjects/SDSS_datathon2025/data/cleaned_real_estate_data_numerical.csv"
 df = pd.read_csv(file_path)
 
 plt.figure(figsize=(12, 6))
@@ -30,4 +34,5 @@ plt.ylabel("Listing Price")
 plt.title("Price Variations Across Wards")
 
 # Show plot
-plt.show()
+plt.savefig(os.path.join(base_dir, 'visualization_images', 'wards_price_variation'), dpi=300)
+print("Figure created successfully! You can open 'wards_price_variation' to view it.")
