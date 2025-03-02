@@ -9,9 +9,10 @@
 6. [Model Performance Evaluation](#-model-performance-evaluation)
 7. [Model Tuning & Improvements](#-model-tuning--improvements)
 8. [Best Model & Next Steps](#-best-model--next-steps)
-9. [Contributors](#-contributors)
-10. [AI Assistance](#-ai-assistance)
-11. [License](#-license)
+9. [Open Source & Licensing](#-open-source--licensing)
+10. [Contributors](#-contributors)
+11. [AI Assistance](#-ai-assistance)
+12. [License](#-license)
 
 ## 📖 Overview
 This project builds a **real estate price prediction web application** using a pre-trained machine learning model. The goal is to provide an interactive tool for users to estimate property listing prices based on features such as:
@@ -52,7 +53,6 @@ pip install -r requirements.txt
   pip install xgboost
   ```
 
-
 ## 🚀 Running the Web App
 The real estate price prediction tool is available as a **web application** using **Streamlit**.  
 To launch the app, run:
@@ -65,7 +65,6 @@ This will open a web browser where you can:
 - Input property details (e.g., bedrooms, bathrooms, size group, subway proximity).
 - Get **price predictions** using the **pre-trained model**.
 - View model evaluation results.
-
 
 ## 📂 Code Structure
 This project consists of three main components:
@@ -81,7 +80,6 @@ This project consists of three main components:
 3. **Visualization & Web App (`src/visualizations/` and `src/`)**
    - Code for generating exploratory data analysis and model performance visualizations.
    - The **Streamlit web application** is in `src/toronto_property_price_prediction_web_app.py` and serves as the user interface.
-
 
 ## 📂 Datasets
 This project includes two datasets:
@@ -102,7 +100,6 @@ This project includes two datasets:
   - `subway_distance` → Distance to the nearest TTC subway station (available in enhanced dataset)
 - **Target Variable:** `listing_price` → The price of the property
 
-
 ## 📊 Model Performance Evaluation
 | Model               | R² Score | MAE ($) |
 |---------------------|---------|---------|
@@ -113,18 +110,26 @@ This project includes two datasets:
 | **XGBoost**           | 0.9113  | 111,094  |
 | **Random Forest**      | 0.9040  | 119,793  |
 
-
 ## 🔧 Model Tuning & Improvements
 - **Feature Engineering:** Add `price per sqft`, `location`, or `year_built` for better accuracy.
 - **Hyperparameter Tuning:** Use `GridSearchCV` or `RandomizedSearchCV` to optimize model parameters.
 - **Geospatial Data Integration:** Include distance to TTC subway stations for location-based price adjustments.
 - **Deployment:** The pre-trained model is stored and used directly for predictions.
 
-
 ## 🏆 Best Model & Next Steps
 ✅ The **best model** based on performance is **Gradient Boosting**.  
 📌 Future work includes **improving model generalization** and enhancing the **web app UI**.
 
+## 📜 Open Source & Licensing
+This project uses the following open-source models and libraries:
+- **Scikit-learn** (BSD-3 License) – Linear Regression, Random Forest, Gradient Boosting, MLPRegressor.
+- **XGBoost** (Apache 2.0 License) – XGBoostRegressor.
+- **LightGBM** (MIT License) – LightGBMRegressor.
+
+For full licensing details, refer to the respective repositories:
+- [Scikit-learn License](https://github.com/scikit-learn/scikit-learn/blob/main/COPYING)
+- [XGBoost License](https://github.com/dmlc/xgboost/blob/master/LICENSE)
+- [LightGBM License](https://github.com/microsoft/LightGBM/blob/master/LICENSE.txt)
 
 ## 👥 Contributors
 This project was created by:
@@ -133,32 +138,10 @@ This project was created by:
 - **Duncan Wan**
 - **Oceane Yembiline**
 
-Feel free to contribute to this project! If you have any suggestions, open an issue or submit a pull request.
-
-
 ## 🤖 AI Assistance
 This project was developed with guidance from **ChatGPT (OpenAI)**.
-
 
 ## 📜 License
 📄 MIT License
 
 © 2024 Vennise Ho
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
