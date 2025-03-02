@@ -22,7 +22,7 @@ from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.metrics import mean_absolute_error, r2_score
 
 # Load dataset
-file_path = "cleaned_real_estate_data_numerical.csv"
+file_path = "../../data/cleaned_real_estate_data_numerical.csv"
 df = pd.read_csv(file_path)
 
 # Define features (independent variables) and target (dependent variable)

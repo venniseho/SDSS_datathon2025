@@ -5,10 +5,10 @@ import folium
 from shapely.geometry import Point, LineString
 
 # Load real estate data
-real_estate_df = pd.read_csv('real_estate_with_subway_distance.csv')
+real_estate_df = pd.read_csv('data/real_estate_with_subway_distance.csv')
 
 # Load subway station data
-subway_stations_gdf = gpd.read_file('DMTI2012_Subway.shp')
+subway_stations_gdf = gpd.read_file('data/DMTI2012_Subway.shp')
 
 # Convert real estate data into a GeoDataFrame
 real_estate_gdf = gpd.GeoDataFrame(real_estate_df,
