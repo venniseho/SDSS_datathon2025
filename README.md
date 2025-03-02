@@ -1,4 +1,4 @@
-# 🏠 Real Estate Price Prediction
+# 🏠 Toronto Property Price Prediction Web App
 
 ## 📖 Table of Contents
 1. [Overview](#-overview)
