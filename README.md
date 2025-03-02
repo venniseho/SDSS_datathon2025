@@ -60,6 +60,7 @@ To launch the app, run:
 ```bash
 streamlit run src/toronto_property_price_prediction_web_app.py
 ```
+To close the web app CTRL + C while the tab is still open.
 
 This will open a web browser where you can:
 - Input property details (e.g., bedrooms, bathrooms, size group, subway proximity).
@@ -70,16 +71,17 @@ This will open a web browser where you can:
 This project consists of three main components:
 
 1. **Data Processing (`src/data_processing/`)**
-   - Scripts responsible for cleaning and transforming raw real estate data.
-   - Integrates geospatial data (TTC subway distances) to enhance the dataset.
+   - Scripts responsible for cleaning and transforming raw real estate data. (Availabe to run with the command: ```python src/data_processing/data_cleaning_full_numerical.py```)
+   - Integrates geospatial data (TTC subway distances) to enhance the dataset. (Availabe to run with the command: ```python src/data_processing/subway_distance_data_cleaning.py```)
 
 2. **Model Training & Evaluation (`src/models/`)**
    - Code to train multiple regression models and compare their performance.
    - Saves the best pre-trained model for deployment.
 
 3. **Visualization & Web App (`src/visualizations/` and `src/`)**
-   - Code for generating exploratory data analysis and model performance visualizations.
-   - The **Streamlit web application** is in `src/toronto_property_price_prediction_web_app.py` and serves as the user interface.
+   - Code for generating exploratory data analysis and model performance visualizations. (Availabe to run with the command: ```python src/visualization/[visualization file name]```
+        - Already generated visualization images are in the folder ```src/visualization/visualization_images```
+   - The **Streamlit web application** is in ```src/toronto_property_price_prediction_web_app.py``` and serves as the user interface.
 
 ## 📂 Datasets
 This project includes two datasets:
@@ -192,3 +194,21 @@ This project was developed with guidance from **ChatGPT (OpenAI)**.
 📄 MIT License
 
 © 2024 Vennise Ho
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
