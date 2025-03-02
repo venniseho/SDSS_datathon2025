@@ -97,7 +97,6 @@ This project includes two datasets:
   - `num_baths` → Number of bathrooms
   - `monthly_maintenance_fee` → Monthly maintenance cost (in $)
   - `size_group` → Property size category (e.g., small, medium, large)
-  - `subway_distance` → Distance to the nearest TTC subway station (available in enhanced dataset)
 - **Target Variable:** `listing_price` → The price of the property
 
 ## 📊 Model Performance Evaluation
@@ -113,7 +112,7 @@ This project includes two datasets:
 ✅ The **best model** based on performance is **Gradient Boosting**.  
 
 This information is found in: ```src/visualization/visualization_images/model_evaluation_scores.txt``` and as a graph in ```src/visualization/visualization_images/model_evaluation.png```
-The model evaluation script produces the text file and graph which is run by: 
+The model evaluation script produces the text file and graph which is run with the command: ```python src/visualization/evaluate_models.py```
 
 ## 🔧 Model Tuning & Improvements
 - **Feature Engineering:** Add `price per sqft`, `location`, or `year_built` for better accuracy.
@@ -165,22 +164,18 @@ If you encounter a `ModuleNotFoundError` when running a script from the command 
 #### **Windows (cmd)**
 ```bash
 set PYTHONPATH=%CD%
-python src/visualization/evaluate_models.py
 ```
 #### **PowerShell**
 ```powershell
 $env:PYTHONPATH = $PWD
-python src/visualization/evaluate_models.py
 ```
 #### **Mac/Linux**
 ```bash
 export PYTHONPATH=$(pwd)
-python src/visualization/evaluate_models.py
 ```
 Alternatively, navigate to the `src` directory and run:
 ```bash
 cd src
-python -m visualization.evaluate_models
 ```
 
 ## 👥 Contributors
