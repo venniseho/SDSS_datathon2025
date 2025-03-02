@@ -1,16 +1,26 @@
 """
-Real Estate Data Cleaning & Preprocessing
+Toronto Real Estate Data Preprocessing (Categorical & Numerical)
 
-The initial script cleans & processes real estate data.
+This script prepares raw real estate data for machine learning by handling missing and dirty data to ensure
+data integrity and ease of use.
+
+Column Headers:
+"id", "ward_num", "num_beds", "num_baths", "has_den", "size_group", "has_parking",
+"property_orientation", "days_on_market", "building_age", "monthly_maintenance_fee",
+"listing_price", "latitude", "longitude"
 
 Generated with assistance from ChatGPT, an AI language model by OpenAI.
 Date: 2025-03-01
 """
-
+import os
 import pandas as pd
 
+# Get the absolute path of the current script (app.py) and define the correct model path
+base_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
+file_path = os.path.join(project_root, "data", "real-estate-data.csv")
+
 # Load the dataset
-file_path = "../../data/real-estate-data.csv"
 df = pd.read_csv(file_path)
 
 # Rename column headers for ease of use

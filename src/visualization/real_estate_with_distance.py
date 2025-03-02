@@ -10,16 +10,27 @@ Author: Lillian Toe
 Date: 2025-03-01
 Generated with assistance from ChatGPT (OpenAI)
 """
+import os
 import pandas as pd
 import geopandas as gpd
 import folium
 from shapely.geometry import Point, LineString
 
+# Get the absolute path of the current script (app.py) and define the correct model path
+base_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
+real_estate_file_path = os.path.join(project_root, "data", "real_estate_with_subway_distance.csv")
+
 # Load real estate data
-real_estate_df = pd.read_csv('../../data/real_estate_with_subway_distance.csv')
+real_estate_df = pd.read_csv(real_estate_file_path)
+
+# Get the absolute path of the current script (app.py) and define the correct model path
+base_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
+subway_file_path = os.path.join(project_root, "data", "DMTI2012_Subway.shp")
 
 # Load subway station data
-subway_stations_gdf = gpd.read_file('../../data/DMTI2012_Subway.shp')
+subway_stations_gdf = gpd.read_file(subway_file_path)
 
 # Convert real estate data into a GeoDataFrame
 real_estate_gdf = gpd.GeoDataFrame(real_estate_df,
@@ -74,7 +85,7 @@ for _, row in real_estate_gdf.iterrows():
     ).add_to(toronto_map)
 
 # Save map as HTML file
-toronto_map.save('Real_Estate_Subway_Map_Priced_1.html')
+toronto_map.save('Real_Estate_Subway_Map.html')
 
 # Display message
-print("Map created successfully! You can open 'Real_Estate_Subway_Map_Priced_1.html' to view it.")
+print("Map created successfully! You can open 'Real_Estate_Subway_Map.html' to view it.")

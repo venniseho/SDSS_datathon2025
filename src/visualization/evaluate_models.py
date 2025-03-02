@@ -8,6 +8,8 @@ Author: Vennise Ho
 Date: 2025-03-01
 Generated with assistance from ChatGPT (OpenAI)
 """
+import os
+
 from matplotlib import pyplot as plt
 from src.models.multiple_models import train_and_evaluate_models
 
@@ -39,9 +41,13 @@ def plot_model_comparison(results_df):
     plt.xticks(rotation=45)
 
     plt.tight_layout()
-    plt.show()
+    plt.savefig('model_evaluation', dpi=300)
 
 
-file_path = "../../data/cleaned_real_estate_data_numerical.csv"
+# Get the absolute path of the current script (app.py) and define the correct model path
+base_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
+file_path = os.path.join(project_root, "data", "cleaned_real_estate_data_numerical.csv")
+
 results = train_and_evaluate_models(file_path)
 plot_model_comparison(results)

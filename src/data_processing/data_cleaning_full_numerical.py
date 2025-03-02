@@ -3,8 +3,7 @@ Toronto Real Estate Data Preprocessing (Fully Numerical)
 
 This script prepares raw real estate data for machine learning by:
 - Converting all categorical variables into numerical values
-- Standardizing numerical features for better model performance
-- Handling missing data to ensure data integrity
+- Handling missing & dirty data to ensure data integrity
 
 Column Headers:
 "id", "ward_num", "num_beds", "num_baths", "has_den", "size_group", "has_parking",
@@ -14,11 +13,15 @@ Column Headers:
 Generated with assistance from ChatGPT, an AI language model by OpenAI.
 Date: 2025-03-01
 """
-
+import os
 import pandas as pd
 
+# Get the absolute path of the current script (app.py) and define the correct model path
+base_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
+file_path = os.path.join(project_root, "data", "real-estate-data.csv")
+
 # Load the dataset
-file_path = "../../data/real-estate-data.csv"  # Change this path if needed
 df = pd.read_csv(file_path)
 
 # Define new column headers

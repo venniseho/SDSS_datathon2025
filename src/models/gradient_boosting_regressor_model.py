@@ -16,13 +16,18 @@ Author: Vennise Ho
 Date: 2025-03-01
 Generated with assistance from ChatGPT (OpenAI)
 """
+import os
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingRegressor
 import joblib
 
+# Get the absolute path of the current script (app.py) and define the correct model path
+base_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
+file_path = os.path.join(project_root, "data", "cleaned_real_estate_data_numerical.csv")
+
 # Load dataset
-file_path = "../../data/cleaned_real_estate_data_numerical.csv"
 df = pd.read_csv(file_path)
 
 # Define features (independent variables) and target (dependent variable)
