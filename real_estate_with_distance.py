@@ -1,4 +1,15 @@
-# Import necessary libraries
+"""
+Visualization of Correlation Between Real Estate Price and Distance to Subway
+
+This script creates a map visualizing the relationship between the real estate price
+and distance to the subway. It uses data from the TTC. The visualization shows that there is
+no strong correlation between the two variables, therefore distance to the subway was not included
+in our model.
+
+Author: Lillian Toe
+Date: 2025-03-01
+Generated with assistance from ChatGPT (OpenAI)
+"""
 import pandas as pd
 import geopandas as gpd
 import folium
