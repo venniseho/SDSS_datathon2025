@@ -15,12 +15,11 @@
 12. [License](#-license)
 
 ## 📖 Overview
-This project builds a **real estate price prediction web application** using a pre-trained machine learning model. The goal is to provide an interactive tool for users to estimate property listing prices based on features such as:
+This project builds a **real estate price prediction web application** using a pre-trained machine learning model. The goal is to provide an interactive tool for users to estimate property listing prices based on the following features:
 - Number of bedrooms
 - Number of bathrooms
 - Maintenance fees
 - Property size category
-- Distance to the nearest subway station (Toronto Transit Commission - TTC)
 
 ## 📦 Installation
 Before running the project, install the required dependencies:
