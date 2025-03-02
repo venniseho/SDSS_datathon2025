@@ -19,7 +19,7 @@ Generated with assistance from ChatGPT (OpenAI)
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingRegressor
-from sklearn.metrics import mean_absolute_error, r2_score
+import joblib
 
 # Load dataset
 file_path = "../../data/cleaned_real_estate_data_numerical.csv"
@@ -41,13 +41,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 gb_model = GradientBoostingRegressor(n_estimators=100, learning_rate=0.1, random_state=42)
 gb_model.fit(X_train, y_train)  # Train the model on the training data
 
-# Make predictions on the test set
-y_pred = gb_model.predict(X_test)
+# Save the trained model
+model_filename = "real_estate_model.pkl"
+joblib.dump(gb_model, model_filename)
 
-# Evaluate model performance
-r2 = r2_score(y_test, y_pred)  # R² score (higher is better, range: -∞ to 1)
-mae = mean_absolute_error(y_test, y_pred)  # Mean Absolute Error (lower is better, represents avg error in predictions)
-
-# Print results
-print(f"R² Score: {r2:.4f}")  # Displays how well the model explains the variance in listing prices
-print(f"Mean Absolute Error: ${mae:,.2f}")  # Shows the average error in dollar amount
+print(f"Model saved as {model_filename}")

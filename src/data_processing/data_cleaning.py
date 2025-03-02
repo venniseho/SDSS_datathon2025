@@ -10,7 +10,7 @@ Date: 2025-03-01
 import pandas as pd
 
 # Load the dataset
-file_path = "../../data/real-estate-data.csv"  # Change path if needed
+file_path = "../../data/real-estate-data.csv"
 df = pd.read_csv(file_path)
 
 # Rename column headers for ease of use
@@ -86,7 +86,7 @@ df["has_den"] = df["has_den"].map({"YES": True, "No": False})
 df["has_parking"] = df["has_parking"].map({"Yes": True, "N": False})  # Assuming 'N' means No
 
 # Save the cleaned dataset
-df.to_csv("cleaned_real_estate_data.csv", index=False)
+df.to_csv("../../data/cleaned_real_estate_data.csv", index=False)
 
 # Display cleaned data info
 df.info()

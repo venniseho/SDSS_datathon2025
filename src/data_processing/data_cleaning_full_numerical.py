@@ -65,7 +65,7 @@ df["has_den"] = df["has_den"].str.strip().str.lower().map({"yes": 1, "no": 0})
 df["has_parking"] = df["has_parking"].str.strip().str.lower().map({"yes": 1, "n": 0})
 
 # Save the cleaned numerical dataset
-df.to_csv("cleaned_real_estate_data_numerical.csv", index=False)
+df.to_csv("../../data/cleaned_real_estate_data_numerical.csv", index=False)
 
 # Display cleaned data info
 df.info()
