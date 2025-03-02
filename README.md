@@ -52,7 +52,6 @@ pip install -r requirements.txt
   pip install xgboost
   ```
 
----
 
 ## 🚀 Running the Web App
 The real estate price prediction tool is available as a **web application** using **Streamlit**.  
@@ -67,7 +66,6 @@ This will open a web browser where you can:
 - Get **price predictions** using the **pre-trained model**.
 - View model evaluation results.
 
----
 
 ## 📂 Code Structure
 This project consists of three main components:
@@ -84,7 +82,6 @@ This project consists of three main components:
    - Code for generating exploratory data analysis and model performance visualizations.
    - The **Streamlit web application** is in `src/toronto_property_price_prediction_web_app.py` and serves as the user interface.
 
----
 
 ## 📂 Datasets
 This project includes two datasets:
@@ -105,7 +102,6 @@ This project includes two datasets:
   - `subway_distance` → Distance to the nearest TTC subway station (available in enhanced dataset)
 - **Target Variable:** `listing_price` → The price of the property
 
----
 
 ## 📊 Model Performance Evaluation
 | Model               | R² Score | MAE ($) |
@@ -117,7 +113,6 @@ This project includes two datasets:
 | **XGBoost**           | 0.9113  | 111,094  |
 | **Random Forest**      | 0.9040  | 119,793  |
 
----
 
 ## 🔧 Model Tuning & Improvements
 - **Feature Engineering:** Add `price per sqft`, `location`, or `year_built` for better accuracy.
@@ -125,13 +120,11 @@ This project includes two datasets:
 - **Geospatial Data Integration:** Include distance to TTC subway stations for location-based price adjustments.
 - **Deployment:** The pre-trained model is stored and used directly for predictions.
 
----
 
 ## 🏆 Best Model & Next Steps
 ✅ The **best model** based on performance is **Gradient Boosting**.  
 📌 Future work includes **improving model generalization** and enhancing the **web app UI**.
 
----
 
 ## 👥 Contributors
 This project was created by:
@@ -142,12 +135,10 @@ This project was created by:
 
 Feel free to contribute to this project! If you have any suggestions, open an issue or submit a pull request.
 
----
 
 ## 🤖 AI Assistance
 This project was developed with guidance from **ChatGPT (OpenAI)**.
 
----
 
 ## 📜 License
 📄 MIT License
