@@ -9,6 +9,7 @@ Column Headers:
 "property_orientation", "days_on_market", "building_age", "monthly_maintenance_fee",
 "listing_price", "latitude", "longitude"
 
+Author: Vennise Ho
 Generated with assistance from ChatGPT, an AI language model by OpenAI.
 Date: 2025-03-01
 """
